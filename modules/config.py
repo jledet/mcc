@@ -43,7 +43,6 @@ def config(version):
     # Parse config file
     file_parser = ConfigParser.RawConfigParser()
     file_parser.readfp(open(conf.configfile))
-    print(file_parser.sections())
     
     conf.listen_port    = file_parser.getint("general", "port")
     conf.max_users      = file_parser.getint("general", "maxusers")
